@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lockless_queue", "lockless_queue\lockless_queue.vcxproj", "{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Debug|x64.ActiveCfg = Debug|x64
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Debug|x64.Build.0 = Debug|x64
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Debug|x86.ActiveCfg = Debug|Win32
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Debug|x86.Build.0 = Debug|Win32
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Release|x64.ActiveCfg = Release|x64
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Release|x64.Build.0 = Release|x64
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Release|x86.ActiveCfg = Release|Win32
+		{16C4A3DF-62FD-49CD-98A7-06AB9B6C4604}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA2AD301-668E-471A-AD93-820BD2A15855}
+	EndGlobalSection
+EndGlobal
