@@ -8,6 +8,7 @@
 template<typename T>
 struct alignas(16) pointer_t;
 
+
 template<typename T>
 struct Node
 {
@@ -33,6 +34,7 @@ struct alignas(16) pointer_t
 		return ptr == other.ptr && count == other.count;
 	}
 };
+
 
 template<typename T>
 class lockless_queue
