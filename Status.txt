@@ -1,0 +1,1 @@
+MemoryPool::Alloc crashes when multiple producers are there. To fix that, next step is to check in boost how is it donw.
