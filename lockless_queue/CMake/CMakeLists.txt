@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8.9)
+project (lockless_queue)
+set(CMAKE_BUILD_TYPE Release)
+include_directories(includes)
+file(GLOB SOURCES "../src/*.cpp")
+add_library(lockless_queue STATIC ${SOURCES})
+#add_library(lockless_queue SHARED ${SOURCES})
+##add_executable(hello helloworld.cpp)
