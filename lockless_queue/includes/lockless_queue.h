@@ -2,7 +2,7 @@
 
 #include<iostream>
 #include<atomic>
-#include "includes/MemoryPool.h"
+#include "MemoryPool.h"
 #include "TaggedPointer.h"
 
 template<typename T>
@@ -127,13 +127,15 @@ bool lockless_queue<T>::dequeue(T & data)
 			{
 				if (next.ptr == nullptr)
 					return false;
-				std::atomic_compare_exchange_weak(&(tail), &(tail_temp), 
-					pointer_t<T>{next.ptr, tail_temp.count + 1});
+				std::atomic_compare_exchange_weak_explicit(&(tail), &(tail_temp),
+					pointer_t<T>{next.ptr, tail_temp.count + 1}, std::memory_order_release,
+					std::memory_order_relaxed);
 			}
-			//std::cout << "next.ptr: " << next.ptr << std::endl;
+			//std::cout << "next.ptr: " << next.p1`1		tr << std::endl;
 			data = next.ptr->data;
-			if (std::atomic_compare_exchange_weak(&(head), &(head_temp), 
-				pointer_t<T>{next.ptr, head_temp.count+1}))
+			if (std::atomic_compare_exchange_weak_explicit(&(head), &(head_temp),
+				pointer_t<T>{next.ptr, head_temp.count+1}, std::memory_order_release,
+				std::memory_order_relaxed))
 				break;
 		}
 	}

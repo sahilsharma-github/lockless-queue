@@ -1,4 +1,4 @@
-#include "lockless_queue.h"
+#include "../includes/lockless_queue.h"
 #include<thread>
 #include <fstream>
 #include<sstream>
@@ -51,8 +51,9 @@ void consume()
 			consumer1 << data << '\n';
 		else
 			break;*/
-		/*if (!lq.dequeue(data))
-			return;*/
+		if (!lq.dequeue(data))
+			break;
+
 	}
 }
 
@@ -61,19 +62,19 @@ int main()
 {
 	lq.initialize(1000);
 	thread tp1(&produce);
-	thread tp2(&produce);
+	//thread tp2(&produce);
 	tp1.join(); cout << "tp1 joined\n";
-	tp2.join(); cout << "tp2 joined\n";
-	exit(0);
+	//tp2.join(); cout << "tp2 joined\n";
+	//exit(0);
 	
-	thread tp3(&produce);
+	/*thread tp3(&produce);
 	thread tp4(&produce);
 	thread tp5(&produce);
 	
 	
 	tp3.join(); cout << "tp1 joined\n";
 	tp4.join(); cout << "tp1 joined\n";
-	tp5.join(); cout << "tp1 joined\n";
+	tp5.join(); cout << "tp1 joined\n";*/
 	
 
 
