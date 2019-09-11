@@ -44,7 +44,10 @@ The access to CAS using wrapper methods existed before also in both windows and 
 #CAS and the ABA problem
 From Wikipedia:
 In multithreaded computing, the ABA problem occurs during synchronization, when a location is read twice, has the same value for both reads, and "value is the same" is used to indicate "nothing has changed". However, another thread can execute between the two reads and change the value, do other work, then change the value back, thus fooling the first thread into thinking "nothing has changed" even though the second thread did work that violates that assumption.
-And CAS is prone to exactly that, hence it can not be completely relied upon. So yeah, not that simple. However, there are solutions that exist for this. I have used a tagged pointer to overcome this limitation. There are also bunch of new things like hazard pointers(that i still need to get my head around) which can also be used.
+And CAS is prone to exactly that, hence it can not be completely relied upon. So yeah, not that simple. However, there are solutions that exist for this. 
+
+#Tagge Pointer 
+I have used a tagged pointer to overcome this limitation. There are also bunch of new things like hazard pointers(that i still need to get my head around) which can also be used.
 
 #Memory barriers
 Ahhh, i wish i was an expert enough to explain this to anyone. The best i can do is to point you to a Herb Sutter talk. It's quite long, but it is the only way to even begin to understand what memory barriers are and how misunderstanding them can shake everything you ever knew about your code's flow of execution.
