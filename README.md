@@ -1,4 +1,4 @@
-# lockless-queue
+ # lockless-queue
 An unbounded generic lockless SPMC(Single Producer, multiple consumer) queue
 
 Hi,
@@ -55,3 +55,5 @@ https://www.youtube.com/watch?v=A8eCGOqgvH4
 
 
 ## So let's talk about the algorithm now.
+
+<To be continued.>
